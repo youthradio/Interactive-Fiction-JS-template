@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <main role="main">
+    <div class="container">
+      <div id="game-start"class="row">
+        <div class="col">
+          <h1>Interactive CS </h1>
+          <p> This is the start, please insert your name and click start</p>
+            <div class="input-group mb-3">
+              <input id="name-input" type="text" class="form-control" placeholder="Your Name">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="startGame()">START</button>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+      <!-- passage 1 -->
+      <div id="passage-1" class="row" hidden>
+        <div class="col">
+            <p>Hi  <span class="player-name" id="user-name"><span> to survive you only have two options </p>
+            <p>This is a very difficult game </p>  
+            <p><a href="#" id="option-1" onclick="clickFunction(id)">Option 1</a> and <a href="#" id="option-2" onclick="clickFunction(id)">Option 2</a></p>
+        </div>
+      </div>
+
+      <!-- passage 2 -->
+      <div id="passage-2" class="row" hidden>
+        <div class="col">
+          <p>You're Dead</p>
+
+          <p><a href="#" onclick="location.reload()">Restart</a></p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="error-msg-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">ERROR BOX</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="error-msg" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
