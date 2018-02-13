@@ -14,9 +14,9 @@
 
 <body>
   <main role="main">
-    <div class="container">
-      <div id="game-start"class="row">
-        <div class="col">
+    <div class="container h-100">
+      <div id="game-start" class="row align-items-center h-100">
+        <div class="col-sm-6 mx-auto">
           <h1>Interactive CS </h1>
           <p> This is the start, please insert your name and click start</p>
             <div class="input-group mb-3">
@@ -30,17 +30,17 @@
       </div>
 
       <!-- passage 1 -->
-      <div id="passage-1" class="row" hidden>
-        <div class="col">
-            <p>Hi  <span class="player-name" id="user-name"><span> to survive you only have two options </p>
+      <div id="passage-1" class="row align-items-center h-100" hidden>
+        <div class="col-sm-6 mx-auto">
+            <p>Hi  <span class="player-name" id="user-name"></span> to survive you only have two options </p>
             <p>This is a very difficult game </p>
             <p><a href="#" id="option-1" onclick="clickFunction(id)">Option 1</a> and <a href="#" id="option-2" onclick="clickFunction(id)">Option 2</a></p>
         </div>
       </div>
 
       <!-- passage 2 -->
-      <div id="passage-2" class="row" hidden>
-        <div class="col">
+      <div id="passage-2" class="row align-items-center h-100" hidden>
+        <div class="col-sm-6 mx-auto">
           <p>You're Dead</p>
 
           <p><a href="#" onclick="location.reload()">Restart</a></p>

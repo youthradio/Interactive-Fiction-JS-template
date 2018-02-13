@@ -12,14 +12,18 @@ var playerName = '';
 //start Game function, when the user press the button
 function startGame() {
   playerName = nameInput.value;
-
-  if (playerName != '') {
-    //test if the user has insert a name
-    passage1Function();
-
-  } else {
+  // != is different?
+  // == is equal?
+  // < smaller
+  // >
+  if (playerName == '') {
     //otherwise, update error message and toggle modal box
     errorMessage('Please Insert your name');
+
+  } else {
+
+    //test if the user has insert a name
+    passage1Function();
   }
 }
 
