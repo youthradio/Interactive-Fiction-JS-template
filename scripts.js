@@ -1,17 +1,11 @@
-//Variables declaration start
-var nameInput = document.getElementById('name-input');
-var userNameText = document.getElementById('user-name');
-
-var gameStartElement = document.getElementById('game-start');
-var passage1Element = document.getElementById('passage-1');
-var passage2Element = document.getElementById('passage-2');
-
+//custom selector
+var getElement = (name) => document.querySelector(name);
 
 var playerName = '';
 
 //start Game function, when the user press the button
 function startGame() {
-  playerName = nameInput.value;
+  playerName = getElement('#name-input').value;
   // != is different?
   // == is equal?
   // < smaller
@@ -28,14 +22,14 @@ function startGame() {
 }
 
 function passage1Function() {
-  userNameText.innerHTML = playerName; //replace user name inside span on passage1
-  gameStartElement.hidden = true; //make gameStartElement invisible
-  passage1Element.hidden = false; //make passage1Element visible
+  getElement('#user-name').innerHTML = playerName; //replace user name inside span on passage1
+  getElement('#game-start').hidden = true; //make getElement('#game-start') invisible
+  getElement('#passage-1').hidden = false; //make getElement('#passage-1') visible
 }
 
 function passage2Function() {
-  passage1Element.hidden = true; //make passage1Element invisible
-  passage2Element.hidden = false; //make passage2Element visible
+  getElement('#passage-1').hidden = true; //make getElement('#passage-1') invisible
+  getElement('#passage-2').hidden = false; //make getElement('#passage-2') visible
 
 }
 
@@ -55,6 +49,6 @@ function clickFunction(id) {
 
 function errorMessage(message) {
   //generic funciton to show modal with error message
-  document.getElementById('error-msg').innerHTML = message; //replace innerHTML with message
+  getElement('#error-msg').innerHTML = message; //replace innerHTML with message
   $('#error-msg-box').modal('show');
 }
