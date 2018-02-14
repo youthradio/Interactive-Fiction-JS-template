@@ -35,16 +35,24 @@ function passage2Function() {
 
 //function to process options clicks, it checks the id name
 function clickFunction(id) {
-  if (id == 'option-1') {
+  if (id == 'water-option') {
     //test if id == option-1
     passage2Function();
-  } else if (id == 'option-2') {
+  } else if (id == 'soda-option') {
     //test if id == option-2
 
   } else if (id == '') {
 
   }
 }
+
+//Enter key enable for name-input
+getElement("#name-input").addEventListener("keyup", e => {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+        startGame();
+    }
+});
 
 
 function errorMessage(message) {
