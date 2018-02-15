@@ -8,3 +8,9 @@ body {
   font-family: verdana;
   font-weight: bold;
 }
+
+div {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
